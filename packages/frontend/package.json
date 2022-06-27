@@ -1,0 +1,24 @@
+{
+	"name": "frontend",
+	"version": "0.0.1",
+	"description": "Frontend code for FurryBeware",
+	"private": true,
+	"productName": "FurryBeware",
+	"scripts": {
+		"build": "quasar build",
+		"build:pwa": "quasar build -m pwa",
+		"start:dev": "quasar dev"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"pinia": "^2.0.11",
+		"@quasar/extras": "^1.0.0",
+		"quasar": "^2.6.0",
+		"vue": "^3.0.0",
+		"vue-router": "^4.0.0"
+	},
+	"devDependencies": {
+		"@quasar/app-vite": "^1.0.0",
+		"autoprefixer": "^10.4.2"
+	}
+}

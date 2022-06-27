@@ -1,0 +1,38 @@
+{
+	"name": "furry-beware",
+	"description": "The code that powers Furry Beware",
+	"author": "Daryl Ronningen <relms@relms.dev>",
+	"private": true,
+	"license": "GPL-3.0-or-later",
+	"workspaces": [
+		"packages/*"
+	],
+	"repository": {
+		"url": "https://github.com/FurryBeware/FurryBeware"
+	},
+	"scripts": {
+		"commit": "cz",
+		"lint": "eslint \"packages/**/{src,apps,libs,test}/**/*.{ts,js,vue}\" --fix",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.0.3",
+		"@commitlint/config-conventional": "^17.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.30.0",
+		"@typescript-eslint/parser": "^5.30.0",
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.18.0",
+		"eslint-plugin-vue": "^9.1.1",
+		"husky": "^8.0.1",
+		"lerna": "^5.1.6",
+		"nx": "^14.3.6",
+		"typescript": "^4.7.4",
+		"vite-plugin-eslint": "^1.6.1"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	}
+}
