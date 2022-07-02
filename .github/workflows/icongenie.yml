@@ -1,0 +1,35 @@
+name: "Generate Icons"
+
+on:
+  push:
+    paths:
+      - "*.png"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    name: Generate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3.3.0
+
+      - name: Install IconGenie
+        run: "npm install @quasar/icongenie -g"
+
+      - name: Generate Icons
+        run: |
+          cd packages/frontend
+          icongenie generate -p icongenie-icons.json
+
+      - name: Push icons back to repo
+        run: |
+          git config --global user.name "FurryBeware IconGenie CI"
+          git config --global user.email "noreply@relms.dev"
+
+          git add .
+          git commit -m "ci: update generated icons"
+          git push
