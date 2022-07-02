@@ -12,7 +12,6 @@ module.exports = configure(function(ctx) {
 		extras: [
 			'roboto-font',
 			'mdi-v6',
-			'material-icons',
 		],
 		build: {
 			target: {
@@ -23,11 +22,6 @@ module.exports = configure(function(ctx) {
 		devServer: {
 			open: true,
 		},
-		framework: {
-			config: {},
-			plugins: [],
-		},
-		animations: [],
 		ssr: {
 			pwa: false,
 			prodPort: 3000,
@@ -42,5 +36,6 @@ module.exports = configure(function(ctx) {
 			manifestFilename: 'manifest.json',
 			useCredentialsForManifestTag: false,
 		},
+		animations: 'all',
 	};
 });
