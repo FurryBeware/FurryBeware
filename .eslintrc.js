@@ -64,5 +64,6 @@ module.exports = {
 		'no-tabs': 'off',
 		'vue/html-indent': ['error', 'tab'],
 		'space-before-function-paren': 'off',
+		'vue/max-attributes-per-line': 'off',
 	},
 };
