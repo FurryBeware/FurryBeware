@@ -18,10 +18,10 @@
 	"devDependencies": {
 		"@commitlint/cli": "17.0.3",
 		"@commitlint/config-conventional": "17.0.3",
+		"@ryansonshine/commitizen": "^4.2.8",
+		"@ryansonshine/cz-conventional-changelog": "^3.3.4",
 		"@typescript-eslint/eslint-plugin": "5.30.5",
 		"@typescript-eslint/parser": "5.30.5",
-		"commitizen": "4.2.4",
-		"cz-conventional-changelog": "3.3.0",
 		"eslint": "8.19.0",
 		"eslint-plugin-vue": "9.2.0",
 		"husky": "8.0.1",
@@ -30,7 +30,7 @@
 	},
 	"config": {
 		"commitizen": {
-			"path": "cz-conventional-changelog"
+			"path": "@ryansonshine/cz-conventional-changelog"
 		}
 	}
 }
