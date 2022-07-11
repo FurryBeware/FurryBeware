@@ -1839,7 +1839,6 @@ __metadata:
     "@nestjs/platform-fastify": "npm:9.0.1"
     "@nestjs/schematics": "npm:9.0.1"
     reflect-metadata: "npm:0.1.13"
-    rimraf: "npm:3.0.2"
     rxjs: "npm:7.5.5"
   languageName: unknown
   linkType: soft
@@ -3942,6 +3941,7 @@ __metadata:
     eslint: "npm:8.19.0"
     eslint-plugin-vue: "npm:9.2.0"
     husky: "npm:8.0.1"
+    rimraf: "npm:^3.0.2"
     typescript: "npm:4.7.4"
     vite-plugin-eslint: "npm:1.6.1"
   languageName: unknown

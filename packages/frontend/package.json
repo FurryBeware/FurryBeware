@@ -5,9 +5,10 @@
 	"private": true,
 	"productName": "FurryBeware",
 	"scripts": {
-		"build": "quasar build",
-		"build:pwa": "quasar build -m pwa",
-		"start:dev": "quasar dev"
+		"build": "quasar build -m ssr",
+		"prebuild": "rimraf dist",
+		"start:dev": "quasar dev -m ssr",
+		"start:prod": "node dist/ssr/index.js"
 	},
 	"dependencies": {
 		"@quasar/extras": "1.14.2",

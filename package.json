@@ -11,9 +11,13 @@
 		"url": "https://github.com/FurryBeware/FurryBeware"
 	},
 	"scripts": {
+		"build": "yarn workspaces foreach -pi run build",
 		"commit": "cz",
 		"lint": "eslint \"packages/**/{src,apps,libs,test}/**/*.{ts,js,vue}\" --fix",
-		"prepare": "husky install"
+		"prebuild": "yarn workspaces foreach -pi run prebuid",
+		"prepare": "husky install",
+		"start:dev": "yarn workspaces foreach -pi run start:dev",
+		"start:prod": "yarn workspaces foreach -pi run start:prod"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "17.0.3",
@@ -25,6 +29,7 @@
 		"eslint": "8.19.0",
 		"eslint-plugin-vue": "9.2.0",
 		"husky": "8.0.1",
+		"rimraf": "^3.0.2",
 		"typescript": "4.7.4",
 		"vite-plugin-eslint": "1.6.1"
 	},
