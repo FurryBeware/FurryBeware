@@ -1,7 +1,9 @@
 <template>
 	<q-page>
-		<q-input v-model="text" rounded dense outlined input-class="text-left" class="q-mt-md" label="Search for Bewares"
-			:loading="loadingState" debounce="300">
+		<q-input
+			v-model="text" rounded dense outlined input-class="text-left" class="q-mt-md" label="Search for Bewares"
+			:loading="loadingState" debounce="300"
+		>
 			<template #append>
 				<q-icon v-if="text === ''" name="mdi-magnify" />
 				<q-icon v-else name="mdi-close-circle-outline" class="cursor-pointer" @click="text = ''" />

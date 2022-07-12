@@ -13,7 +13,7 @@
 	"scripts": {
 		"build": "yarn workspaces foreach -pi run build",
 		"commit": "cz",
-		"lint": "eslint \"packages/**/{src,apps,libs,test}/**/*.{ts,js,vue}\" --fix",
+		"lint": "eslint \"packages/**/src/**/*.{ts,js,vue}\" --fix",
 		"prebuild": "yarn workspaces foreach -pi run prebuid",
 		"prepare": "husky install",
 		"start:dev": "yarn workspaces foreach -pi run start:dev",
