@@ -520,6 +520,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/config@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@nestjs/config@npm:2.2.0"
+  dependencies:
+    dotenv: "npm:16.0.1"
+    dotenv-expand: "npm:8.0.3"
+    lodash: "npm:4.17.21"
+    uuid: "npm:8.3.2"
+  peerDependencies:
+    "@nestjs/common": ^7.0.0 || ^8.0.0 || ^9.0.0
+    reflect-metadata: ^0.1.13
+    rxjs: ^6.0.0 || ^7.2.0
+  checksum: 52a9a3fbef011c51dfc362043198660373dfc61bdaa2650c93fa082ba7e443073c22683e83a8053975f2b9f683d5db22f962f032dffe09f5f4ac78069312cf1d
+  languageName: node
+  linkType: hard
+
 "@nestjs/core@npm:9.0.2":
   version: 9.0.2
   resolution: "@nestjs/core@npm:9.0.2"
@@ -961,6 +977,13 @@ __metadata:
   version: 1.2.8
   resolution: "@types/har-format@npm:1.2.8"
   checksum: cf2e98419e364553ee8135335426efa2dfc8d03913be15fdba740cfb56788742a5718054ea18324bbe39cfc0e83b24ce5a91fedf5d9666f9e6851726700c7c7e
+  languageName: node
+  linkType: hard
+
+"@types/js-yaml@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "@types/js-yaml@npm:4.0.5"
+  checksum: 586a99838928dc20d7e8826b3d8cab16ae131e36c00e7be4c519c51d30e90d0cbdfa92b4b5564bb1f3168c830e9750816c5e004577da0d207496da16bb0d0487
   languageName: node
   linkType: hard
 
@@ -1835,9 +1858,12 @@ __metadata:
   dependencies:
     "@nestjs/cli": "npm:9.0.0"
     "@nestjs/common": "npm:9.0.2"
+    "@nestjs/config": "npm:^2.2.0"
     "@nestjs/core": "npm:9.0.2"
     "@nestjs/platform-fastify": "npm:9.0.2"
     "@nestjs/schematics": "npm:9.0.1"
+    "@types/js-yaml": "npm:^4.0.5"
+    js-yaml: "npm:^4.1.0"
     reflect-metadata: "npm:0.1.13"
     rxjs: "npm:7.5.6"
   languageName: unknown
@@ -2689,6 +2715,20 @@ __metadata:
   dependencies:
     is-obj: "npm:^2.0.0"
   checksum: 640302936faf887e4772e97f33efdc1d12adc33183503497687f0400ef832f1596e81f19a9d0f641a8e3312e9cbaa1a5d6620783dda0113871064dc9dec4a30d
+  languageName: node
+  linkType: hard
+
+"dotenv-expand@npm:8.0.3":
+  version: 8.0.3
+  resolution: "dotenv-expand@npm:8.0.3"
+  checksum: 8861e588d50a81f155ae67dde4b22caba01eb7b87c20d6eecb5d9d7de0682fddfbc4357de5345e2e1efd94909d978d6af33125f39dec6de609a5dc472f8dbb68
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:16.0.1":
+  version: 16.0.1
+  resolution: "dotenv@npm:16.0.1"
+  checksum: beb53488e342583049efbd1afb4488e97fbcecf2052607e512a3871239a3976fc437a01a8ed9e6fcef6adc316796895c89f95fe0a7faa08c77ba8c22794ea1fc
   languageName: node
   linkType: hard
 
@@ -4871,7 +4911,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.21":
+"lodash@npm:4.17.21, lodash@npm:^4.17.10, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 3ac18e92108d68f88429fcddee609e42cf2b653583d9bac22308815a4cd6b185b89a0ad0d9b0c670c371d9d6b61571a98fee6b36e1db14e52766ca253ed9cba0
