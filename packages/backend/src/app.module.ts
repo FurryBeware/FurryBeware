@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -20,8 +21,12 @@ import configuration from './config/configuration';
 				username: configService.get('database.username'),
 				password: configService.get('database.password'),
 				synchronize: true,
+				autoLoadEntities: true,
+				logging: true,
+				logger: 'advanced-console',
 			}),
 		}),
+		UsersModule,
 	],
 })
 export class AppModule { }
