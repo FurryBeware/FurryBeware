@@ -4,6 +4,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
 	const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
+	app.setGlobalPrefix('/api');
 	await app.listen(8080, '0.0.0.0');
 }
 bootstrap();

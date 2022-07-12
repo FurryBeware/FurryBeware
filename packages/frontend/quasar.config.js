@@ -21,6 +21,9 @@ module.exports = configure(function(ctx) {
 		},
 		devServer: {
 			open: true,
+			hmr: {
+				port: 9101,
+			},
 		},
 		ssr: {
 			pwa: false,
