@@ -1,4 +1,9 @@
+import { AutoMap } from '@automapper/classes';
+
 export class GetUserDto {
-	id: string;
-	username: string;
+	@AutoMap()
+		id: string;
+
+	@AutoMap()
+		username: string;
 }

@@ -1,4 +1,9 @@
+import { AutoMap } from '@automapper/classes';
+
 export class CreateUserDto {
-	username: string;
-	password: string;
+	@AutoMap()
+		username: string;
+
+	@AutoMap()
+		password: string;
 }

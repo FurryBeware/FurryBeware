@@ -3,6 +3,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import configuration from './config/configuration';
+import { AutomapperModule } from '@automapper/nestjs';
+import { classes } from '@automapper/classes';
 
 @Module({
 	imports: [
@@ -25,6 +27,9 @@ import configuration from './config/configuration';
 				logging: true,
 				logger: 'advanced-console',
 			}),
+		}),
+		AutomapperModule.forRoot({
+			strategyInitializer: classes(),
 		}),
 		UsersModule,
 	],

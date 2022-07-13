@@ -1,29 +1,35 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
+import { MapInterceptor, MapPipe } from '@automapper/nestjs';
+import { User } from './entities/user.entity';
+import { GetUserDto } from './dto/get-user.dto';
 
 @Controller('users')
 export class UsersController {
 	constructor(private readonly usersService: UsersService) { }
 
 	@Post()
-	create(@Body() createUserDto: CreateUserDto) {
-		return this.usersService.create(createUserDto);
+	@UseInterceptors(MapInterceptor(User, CreateUserDto))
+	async create(@Body(MapPipe(User, CreateUserDto)) createUserDto: CreateUserDto): Promise<void> {
+		return await this.usersService.create(createUserDto);
 	}
 
 	@Get(':id')
-	findOne(@Param('id') id: string) {
-		return this.usersService.findOne(id);
+	@UseInterceptors(MapInterceptor(User, GetUserDto))
+	async findOne(@Param('id') id: string): Promise<GetUserDto> {
+		return await this.usersService.findOne(id);
 	}
 
 	@Patch(':id')
-	update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-		return this.usersService.update(id, updateUserDto);
+	@UseInterceptors(MapInterceptor(User, UpdateUserDto))
+	async update(@Param('id') id: string, @Body(MapPipe(User, UpdateUserDto)) updateUserDto: UpdateUserDto): Promise<void> {
+		return await this.usersService.update(id, updateUserDto);
 	}
 
 	@Delete(':id')
-	remove(@Param('id') id: string) {
-		return this.usersService.remove(id);
+	async remove(@Param('id') id: string): Promise<void> {
+		return await this.usersService.remove(id);
 	}
 }
