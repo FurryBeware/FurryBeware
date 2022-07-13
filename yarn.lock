@@ -1963,6 +1963,8 @@ __metadata:
     "@nestjs/typeorm": "npm:^9.0.0"
     "@types/js-yaml": "npm:^4.0.5"
     "@types/uuid": "npm:^8.3.4"
+    class-transformer: "npm:^0.5.1"
+    class-validator: "npm:^0.13.2"
     js-yaml: "npm:^4.1.0"
     pg: "npm:^8.7.3"
     reflect-metadata: "npm:^0.1.13"
@@ -2288,6 +2290,23 @@ __metadata:
   version: 3.3.2
   resolution: "ci-info@npm:3.3.2"
   checksum: 88ce43eb69180dd01bef1968c43ca39ef0ac6fce5d112d8689d9f58c7f239ae568e48b9097a1315866b66af46fd0158133258c1df0ecd672c99bdee580c25e66
+  languageName: node
+  linkType: hard
+
+"class-transformer@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "class-transformer@npm:0.5.1"
+  checksum: 08f2a0eaf5e674ef8b8839bd63c9b917fcc811a8d7044702dee933b1ba88d8906f5141c616173c22568d8b3e95cdf4e3afd25dcbd0f878b138a0b6e550b11d0c
+  languageName: node
+  linkType: hard
+
+"class-validator@npm:^0.13.2":
+  version: 0.13.2
+  resolution: "class-validator@npm:0.13.2"
+  dependencies:
+    libphonenumber-js: "npm:^1.9.43"
+    validator: "npm:^13.7.0"
+  checksum: 3b3c45bb9c84be5a621c23ecc1db70a844554d348b0d64229487e46b362fb945b885e60b65c2016f3f782f7e609c75919cb058ba3b264fb7ee8b30e654fa938f
   languageName: node
   linkType: hard
 
@@ -4958,6 +4977,13 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:~0.4.0"
   checksum: b281df6770286ddce58d431441772b75ec04f03264af49532c330fdbe070795196538459754cb9e564e7759dbd79c2f88fab01bb3295b2a70249d1a777016cb4
+  languageName: node
+  linkType: hard
+
+"libphonenumber-js@npm:^1.9.43":
+  version: 1.10.8
+  resolution: "libphonenumber-js@npm:1.10.8"
+  checksum: df5ad23c802d934317fb2de1e3f9386242c357d1ef1508477c9a34f2e3669298dd1487724274eec0c1b9c017c1484d4731e4ad615bc5398d3034810440493ae2
   languageName: node
   linkType: hard
 
@@ -7674,6 +7700,13 @@ __metadata:
     spdx-correct: "npm:^3.0.0"
     spdx-expression-parse: "npm:^3.0.0"
   checksum: 6d62b39e947077e554dfdf6a760fb52e8db73e7724aeeab1a1f4aa742e75b2ca5092b9f7b1b9171778e96f592628932ee07784a2c86f4152411180a32a8824be
+  languageName: node
+  linkType: hard
+
+"validator@npm:^13.7.0":
+  version: 13.7.0
+  resolution: "validator@npm:13.7.0"
+  checksum: 1c42a259d072334c89dbd94ae026901a8a85dc7389f24a00650a38827ab44ee563370b896b4cc318697587e7aa93d230fdfa527d78c187b08f9816af23025a74
   languageName: node
   linkType: hard
 
