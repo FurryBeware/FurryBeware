@@ -4,7 +4,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { MapInterceptor, MapPipe } from '@automapper/nestjs';
 import { User } from './entities/user.entity';
-import { GetUserDto } from './dto/get-user.dto';
+import { GetUserDto, GetUserPrivDto } from './dto/get-user.dto';
 
 @Controller('users')
 export class UsersController {
@@ -14,6 +14,12 @@ export class UsersController {
 	@UseInterceptors(MapInterceptor(User, CreateUserDto))
 	async create(@Body(MapPipe(User, CreateUserDto)) createUserDto: CreateUserDto): Promise<void> {
 		return await this.usersService.create(createUserDto);
+	}
+
+	@Post('/login')
+	@UseInterceptors(MapInterceptor(User, GetUserDto))
+	async login(@Body(MapPipe(User, GetUserPrivDto)) getUserPrivDto: GetUserPrivDto): Promise<GetUserDto> {
+		return await this.usersService.findOnePriv(getUserPrivDto);
 	}
 
 	@Get(':id')

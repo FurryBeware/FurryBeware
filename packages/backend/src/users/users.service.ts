@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { v4 } from 'uuid';
 import { CreateUserDto } from './dto/create-user.dto';
-import { GetUserDto } from './dto/get-user.dto';
+import { GetUserDto, GetUserPrivDto } from './dto/get-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
 
@@ -23,6 +23,11 @@ export class UsersService {
 
 	async findOne(id: string): Promise<GetUserDto> {
 		return await this.usersRepo.findOneBy({ id });
+	}
+
+
+	async findOnePriv(getUserPrivDto: GetUserPrivDto): Promise<GetUserDto> {
+		return await this.usersRepo.findOneBy({ username: getUserPrivDto.username });
 	}
 
 	async update(id: string, updateUserDto: UpdateUserDto): Promise<void> {
