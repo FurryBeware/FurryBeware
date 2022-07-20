@@ -1,7 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
 import configuration from './config/configuration';
+import { AutomapperModule } from '@automapper/nestjs';
+import { classes } from '@automapper/classes';
 
 @Module({
 	imports: [
@@ -20,8 +23,15 @@ import configuration from './config/configuration';
 				username: configService.get('database.username'),
 				password: configService.get('database.password'),
 				synchronize: true,
+				autoLoadEntities: true,
+				logging: true,
+				logger: 'advanced-console',
 			}),
 		}),
+		AutomapperModule.forRoot({
+			strategyInitializer: classes(),
+		}),
+		UsersModule,
 	],
 })
 export class AppModule { }
