@@ -527,7 +527,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/config@npm:^2.2.0":
+"@nestjs/config@npm:2.2.0":
   version: 2.2.0
   resolution: "@nestjs/config@npm:2.2.0"
   dependencies:
@@ -1856,7 +1856,7 @@ __metadata:
   dependencies:
     "@nestjs/cli": "npm:9.0.0"
     "@nestjs/common": "npm:9.0.4"
-    "@nestjs/config": "npm:^2.2.0"
+    "@nestjs/config": "npm:2.2.0"
     "@nestjs/core": "npm:9.0.4"
     "@nestjs/platform-fastify": "npm:9.0.4"
     "@nestjs/schematics": "npm:9.0.1"
